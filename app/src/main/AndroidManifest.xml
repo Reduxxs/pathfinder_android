@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.tensorflow.lite.examples.classification">
+
+    <uses-sdk />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_black"
+        android:label="PathFinder"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.ImageClassification">
+        <activity
+            android:name=".Distance"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAyMSArck8P1ImGg3IHkXlfsSsckF0r8wU" />
+
+        <activity
+            android:name=".GPSActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr" />
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="PathFinder"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ClassifierActivity" />
+        <activity android:name=".DetectorActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".WelcomeMessage" />
+        <activity android:name=".TextReader" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".face_detection" />
+        <activity android:name=".gender" />
+    </application>
+
+</manifest>
